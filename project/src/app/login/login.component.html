@@ -1,0 +1,70 @@
+<html>
+
+<head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+                body {
+                        font-family: "MyFont";
+                }
+                input{
+                        font-family: "MyFont";
+   
+                }
+        </style>
+</head>
+
+<body>
+        <form [formGroup]="form" (ngSubmit)="OnSubmit(form.value)" >
+
+                <div class="form-group">
+                        <!-- <img src="../../assets/rekarsh.PNG" height="100%" width="100%"/> -->
+                        <p>. התחברו אלינו ותתחילו להנות ממגוון עצום של תכנים קולינריים</p>
+                        <p> ...כאן תוכלו למצוא את המתכון המושלם עבורכם</p>
+                        <p>!!!בתיאבון</p>
+
+                        <p>🍓משתמשים חדשים?
+                                <a href="/register">הרשמו </a>
+                        </p>
+                        <br>
+                        <br>
+                        <div style="border: 3px solid crimson; height: 270px; width:250px; margin-left:42%;font-family:MyFont;">
+                                <br>
+                                <b>:שם משתמש</b>
+                                <br>
+                                <br>
+                                <input type="text"   [(ngModel)]="u.UserName" formControlName="nameU" />
+                                <br>
+                                <br>
+                                <b>:סיסמא</b>
+                                <br>
+                                <br>
+                                <input type="password"   [(ngModel)]="u.Password" formControlName="nameP" />
+                                <br>
+                                <b>
+                                        <p style="color:white; border:2px dashed rgb(25, 21, 25) ">שים ❤️: הסיסמא צריכה להכיל רק מספרים</p>
+                                </b>
+
+
+                                <input type="button" [disabled]="!form.valid" value="התחבר" (click)="UserFound()" />
+                                <br>
+                        </div>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+                        <br>
+                        <br>
+
+                        <br>
+                </div>
+        </form>
+ 
+</body>
+
+</html>

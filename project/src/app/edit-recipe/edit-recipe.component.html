@@ -1,0 +1,74 @@
+<html>
+
+<body style="border: 3px solid crimson; height: 790px; width:250px; margin-left:34%;">
+  <h1 style="font-size:30px; color:aliceblue; text-align:right; font-size:15px; " >
+    משתמש נוכחי: {{u}} 🍓</h1>
+  <b> עריכת מתכון: {{this.myCat.NameRecipe}}</b>
+  <form [formGroup]="form" (ngSubmit)="OnSubmit(form.value)">
+    <br>
+    <br>
+    <b>:זמן הכנה</b>
+    <br>
+    <input type="text" [(ngModel)]="myCat.Time" name="time" (change)="onChange" formControlName="nameT">
+    <br>
+    <br>
+    <b>:דרגת קושי</b>
+    <br>
+    <input type="text" [(ngModel)]="myCat.Difficulty" name="difficulty" formControlName="nameD">
+    <br>
+    <br>
+  
+  <br>
+</form>
+<b>:בחר קטגוריה</b>
+<br>
+<select [(ngModel)]="myCat.CategoryRecipe.CategoryName" (ngModelChange)="FindCategory()">
+  <option *ngFor="let x of arrCat">{{x.CategoryName}}</option>
+</select>
+  <br>
+  <br>
+
+
+  <br>
+  <b>מצרכים</b>
+  <div>
+    <div *ngFor="let x of myCat.Ingredients; let i=index;trackBy:trackByFn" >
+      <input size="30px" type="text" [(ngModel)]="myCat.Ingredients[i]"
+        (keyup)="addRowIngridience(i)">
+    </div>
+  </div>
+  <br>
+  <br>
+  <b>אופן הכנה</b>
+  <br>
+  <div>
+    <div *ngFor="let x of myCat.Preparetion;let i=index; trackBy:trackByFn">
+      <input size="30px" type="text" [value]="x" [(ngModel)]="myCat.Preparetion[i]" (keyup)="addRowMaking(i)"> 
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <b>העלאת תמונה</b>
+  <input type="file" [(ngModel)]="myCat.Image">
+
+  <br>
+  <br>
+  <input [disabled]="!form.valid" type="button" value="שלח" (click)="onSubmit()" />
+  <b style="color:transparent">...</b>
+  <input [disabled]="!form.valid" type="reset" value="אפס" />
+  <br>
+
+
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+
+</html>

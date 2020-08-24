@@ -1,0 +1,44 @@
+
+
+<body>
+  <div class="navbar">
+    <ul class="nav navbar-nav">
+
+      <li>
+        <a class="allC" routerLink="register" href="#" routerLinkActive="mycls">הרשמה
+          <img height="25" width="25" src="../../assets/regisretin.png" />
+        </a>
+      </li>
+      <li>
+        <a class="allC" routerLink="login" href="#" routerLinkActive="mycls">התחברות
+          <img height="25" width="25" src="../../assets/privacy-policy.png" />
+        </a>
+      </li>
+      <li>
+        <a class="allC" routerLink="add-recipe" href="#" routerLinkActive="mycls">הוספת מתכון
+          <img height="25" width="25" src="../../assets/70899.svg" /> </a>
+      </li>
+      <li>
+        <a class="allC" routerLink="all" href="#" routerLinkActive="mycls">לכל המתכונים
+          <img height="25" width="25" src="../../assets/menu (1).png" />
+        </a>
+      </li>
+      <li>
+        <a class="allC" routerLink="tips" routerLinkActive="mycls" href="#">טיפים
+          <img height="25" width="25" src="../../assets/cartoon-1299636__340 (1).jpg" />
+        </a>
+      </li>
+      <li>
+        <a class="allC" routerLink="logout" routerLinkActive="mycls" href="#" >יציאה
+            <!-- (click)="onLogOut()" -->
+          <img height="25" width="25" src="../../assets/יציאה.png" />
+        </a>
+      </li>
+      
+      <img class="exe" src="../../assets/jsa.png">
+    </ul>
+  </div>
+
+  <label [(ngModel)]="UserName">{{UserName}}</label>
+  <router-outlet></router-outlet>
+</body>

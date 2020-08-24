@@ -1,0 +1,53 @@
+body {
+    text-align: right;
+    /* The image used */
+    background-image: url("../../assets/מתוקן3.png");
+    /* background-color:gray; */
+    /* display: block; */
+    display:block;
+    /* Full height */
+    height: 100%;
+    margin-bottom: 0%;
+    /* Center and scale the image nicely */
+    /* background-position: left; */
+    background-repeat: no-repeat;
+    background-size:10%;
+    display: block;
+    color:black;
+}
+p{
+    color:crimson;
+}
+.articlesTitle {
+    color:crimson;
+    
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+li{
+    direction: rtl;
+    margin:8px;
+}
+ol{
+    padding: 20px;
+}
+.scrollToTop {
+    width: 55px;
+    height: 50;
+    padding: 8px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
+    outline: 0;
+}
+b{
+    cursor:pointer;
+}
+b:hover{
+    color:black;
+}

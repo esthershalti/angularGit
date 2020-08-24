@@ -1,0 +1,48 @@
+body {
+    text-align: center;
+    /* The image used */
+    /* background-image: url("../../assets/רקעתות.jpg"); */
+    /* background-color: rgb(25, 21, 25); */
+    /* Full height */
+    height: 100%;
+    /* margin-bottom: 1000vw; */
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 100%;
+    direction: rtl;
+    padding-top: 0%;
+    /* position: fixed;
+    z-index: -1;
+    margin-right: -115px;
+    padding-bottom: 0%; */
+}
+
+/* .body {
+
+    text-align: center;
+
+    background-image: url("../../assets/תמונה9.png");
+     background-image: url("../../assets/maxresdefault.jpg");
+
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+        font-family: "MyFont";
+        direction: rtl;
+         box-shadow:0px 0px 10px #ebebeb;
+} */
+
+/* .back{
+
+    position: fixed;
+    z-index: -1;
+    margin-right: -630px;
+
+} */
+
+b {
+    color: black;
+}

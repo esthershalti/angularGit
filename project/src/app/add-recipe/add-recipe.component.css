@@ -1,0 +1,36 @@
+.ht {
+    text-align: center;
+    /* The image used */
+    background-image: url("../../assets/רקעתות.jpg");
+
+    /* Full height */
+    height: 70%;
+    margin-bottom: 0%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.bd {
+  font-family:"MyFont";
+  color: black;
+  text-align: center;
+}
+
+P {
+  border: 3px solid wheat;
+  touch-action:auto
+}
+
+b {
+  color: aliceblue;
+}
+input{
+  font-family: "MyFont";
+  direction: rtl;
+}
+option{
+  font-family: "MyFont";
+}

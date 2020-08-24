@@ -1,0 +1,72 @@
+<body>
+    <!-- <img src="../../assets/נצוני-זהב-שחור.jpg" height="1000px" width="1364px" class="back"> -->
+    <div>
+        <div>
+            <b>משתמש נוכחי: {{u}}🍓</b>
+        </div>
+        <div id="st" style="border: 3px rgb(255, 255, 255) solid; height: 70px;">
+            <b>
+                <span> 🍓סינון </span>
+            </b>
+            <br>
+            <br>
+            <b> שם מתכון:</b>
+
+
+            <input [(ngModel)]="myCat.NameRecipe" style="font-family:MyFont;" type="text" placeholder="הקש שם לסינון">
+
+            <b>
+                <label>קטגוריה:</label>
+            </b>
+            <select style="font-family:MyFont;" [(ngModel)]="myCat.CategoryRecipe.CategoryName">
+                <option *ngFor="let x of arrC">{{x.CategoryName}}</option>
+            </select>
+
+            <b> זמן בדקות:</b>
+
+            <input style="font-family:MyFont;" type="text" [(ngModel)]="myCat.Time" />
+            <a style="color:transparent; size:0px;">.......</a>
+            <button (click)="filter()"> 🔍</button>
+            <a style="color:transparent; size:0px;">..</a>
+            <button (click)="clean()" title=" לחץ לביטול סינון"> ❌</button>
+            <br>
+        </div>
+        
+        <p style="color:black" *ngIf="view">😔 לא נמצאו תוצאות</p>
+        <div style="margin-left: 150px;">
+        <app-recipe-item style="float:left; margin-right:20px; " *ngFor="let item of arr" [myCurrentRecipe]="item"></app-recipe-item>
+    </div><br>
+        <br>
+        <br>      <br>
+        <br>
+        <br>      <br>
+        <br><br>
+        <br>
+        <br>      <br>
+        <br>
+        <br>      <br>
+        <br><br>
+        <br>
+        <br>      <br>
+        <br>
+        <br>      <br>
+        <br>
+        <br> <br>
+        <br>
+        <br>      <br>
+        <br>
+        <br>      <br>
+        <br>
+        <br> <br>
+        <br>
+        <br>      <br>
+        <br>
+        <br>      <br>
+        <br>
+        <br> 
+        <br> 
+        <br> 
+        
+    </div>
+    
+</body>

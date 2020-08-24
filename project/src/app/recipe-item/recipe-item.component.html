@@ -1,0 +1,21 @@
+<body>
+
+    <div class="row">
+        <div class="column">
+            <a style="font-family:MyFont; color:black; font-size:31px; " (click)="check()" routerLink={{link}}>
+                <b style="cursor:-moz-zoom-in;">{{myCurrentRecipe.NameRecipe}}</b>
+            </a>
+            <br>
+            <img height="120" width="160" src="../../assets/{{myCurrentRecipe.Image}}">
+            <h1 style="font-size:20px;text-align:right;">
+                <b style="float:right;">זמן הכנה:</b>
+                <p style="direction:ltr; color:black;">{{myCurrentRecipe.Time|Minit}}</p>
+            </h1>
+            <h1 style="text-align:right;font-size:20px;">דרגת קושי:{{myCurrentRecipe.Difficulty|difficulty}}</h1>
+            <!-- <a routerLink="/recipeDetail/{{myCurrentRecipe.NameRecipe}}">Enter to display the recipe</a> -->
+            <br>
+        </div>
+    </div>
+    
+
+</body>

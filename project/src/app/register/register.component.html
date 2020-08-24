@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+       font-family: "MyFont";
+            text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+    <br>
+    <br>
+    <form style="border: 3px solid crimson  ; height: 500px; width:250px; margin-left:42%; " [formGroup]="form" (ngSubmit)="OnSubmit(form.value)">
+        <div class="form-group">
+
+
+            <img style="margin-left:20px;" src="../..assets/לוגו1.PNG">
+            <div class="clali">
+                <div>
+                    <b style="color:aliceblue">:שם משתמש</b>
+                    <br>
+                    <br>
+                    <input style="font-family:MyFont;" type="text" [(ngModel)]="u.UserName" formControlName="nameU" />
+                    <span style="color:red">*</span>
+                </div>
+                <br>
+                <div>
+                    <b style="color:aliceblue"> :סיסמא</b>
+                    <br>
+                    <br>
+                    <input type="password" [(ngModel)]="u.Password" formControlName="namePS" />
+                    <span style="color:red">*</span>
+                </div>
+                <br>
+                <div>
+                    <b style="color:aliceblue">:כתובת מייל</b>
+                    <br>
+                    <br>
+                    <input style="font-family:MyFont;" type="nameE" aria-required="true" aria-invalid="true" [(ngModel)]="u.Email" formControlName="nameE" required email/>
+                    <span style="color:red">*</span>
+                </div>
+                <br>
+                <div>
+                    <b style="color:aliceblue">:כתובת</b>
+                    <br>
+                    <br>
+                    <input style="font-family:MyFont;" type="text" [(ngModel)]="u.Adress" formControlName="nameA" />
+                </div>
+                <br>
+                <div>
+                    <b style="color:aliceblue">:מספר פלאפון</b>
+                    <br>
+                    <br>
+                    <input style="font-family:MyFont;" type="tel" [(ngModel)]="u.Phone" formControlName="nameP" />
+                </div>
+                <br>
+                <br>
+                <input style="font-family:MyFont;" style="font:aliceblue" type="submit" [disabled]="!form.valid" value="הירשם" (click)="AddUser()" />
+            </div>
+        </div>
+    </form>
+    <br><br><br><br><br><br>
+</body>
+
+</html>

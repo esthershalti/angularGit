@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: "MyFont";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="column">
+            <b>שם:</b>
+            <b>{{r?.NameRecipe}}</b>
+            <br>
+            <br>
+            <img *ngIf="r?.Image" height="140" width="140" src="../../assets/{{r?.Image}}" />
+            <br>
+            <br>
+            <b>קטגוריה: {{r?.CategoryRecipe.CategoryName}}
+                <img  *ngIf="r?.CategoryRecipe.CategoryIcon" height="10" width="10" src="../../assets/{{r?.CategoryRecipe.CategoryIcon}}" />
+            </b>
+            <br>
+            <h3 style="float:right;"><b>זמן הכנה:</b>
+            </h3> 
+            
+            <h3 style="direction:ltr; color:white;">{{r?.Time|Minit}}</h3>
+            <b>דרגת קושי: {{r?.Difficulty|difficulty}}
+            </b>
+            <br>
+            <b>תאריך הוספת המתכון: {{r?.DateAdd| date: "dd/mm/yy"}}</b>
+            <br>
+
+            <b>מצרכים:</b>
+            <ul>
+                <p *ngFor="let current of r?.Ingredients">
+                    <img src="../../assets/icon1.png" height="20" width="20"> {{current}} </p>
+            </ul>
+            <br>
+            <b>אופן ההכנה:</b>
+            <ul>
+                <p *ngFor="let currentT of r?.Preparetion">
+                    <li>🍳{{currentT}}</li>
+                </p>
+            </ul>
+            <br>
+
+            <b>כותב המתכון:</b>
+            <p>{{r?.UserName}}</p>
+            <br>
+            <a *ngIf="flag"  routerLink="/edit-recipe/{{r?.NameRecipe}}">עריכת מתכון</a>
+            <!-- <div style="color:aliceblue">המתכון לא ניתן לעריכה כיון שהוא שלך</div> -->
+            <br>
+            <!-- routerLink="/edit-recipe/{{myCat.NameRecipe}}" -->
+        </div>
+    </div>
+</body>
+
+</html>

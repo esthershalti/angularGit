@@ -1,0 +1,51 @@
+
+        body {
+            font-family:"MyFont";
+            box-sizing: border-box;
+            direction: rtl;
+            text-align: right;
+
+        }
+
+        .column {
+            float: right;
+            width: 33.33%;
+            padding: 5px;
+            text-align: right;
+            border: 5px solid crimson;
+            height: 235px;
+            width: 200px;
+            /* margin: auto; */
+            padding: 15px 25px;
+        }
+        .column:hover{
+            border-style:groove;
+            border-radius: 5%;
+            border-color: yellow;
+        }
+        h1 {
+            color: black;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+            text-align: center;
+            color: rgb(255, 223, 180);
+        }
+
+        a:active {
+            height: 50px;
+        }
+
+        a {
+            text-align: right;
+            font-family: "MyFont";
+            font-size: 34px;
+            color:aliceblue;
+        }
+
+        img {
+            border-radius: 1%;
+        }
